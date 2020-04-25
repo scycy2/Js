@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script>
+			function generate(){
+				var location = document.getElementById("location").value;
+				var companyType = document.getElementById("companyType").value;
+				var companyName = document.getElementById("companyName").value;
+				var bossName = document.getElementById("bossName").value;
+				var money = document.getElementById("money").value;
+				var product = document.getElementById("product").value;
+				var unit = document.getElementById("unit").value;
+				
+				var result = location + "最大" + companyType+companyName+"倒闭了，王八蛋老板"+bossName+"吃喝嫖赌，欠下了"+money+"个亿，"+"带着他的小姨子跑了！我们没有办法，拿着" + product+"抵工资！原价都是一"+unit+"多、两"+unit+"多、三"+unit+"多的"+product+","+"现在全部只卖二十块，统统只要二十块！"+bossName+"王八蛋，你不是人！我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱！";
+				
+				document.getElementById("result").value = result;
+			}
+		</script>
+		<style>
+			span{
+				display: inline-block;
+				border: solid #008000 0.0625rem;
+				width: 15%;
+				margin: 0.625rem;
+			}
+			div{
+				display: inline-block;
+				margin-left: 1.25rem;
+				margin-right: 1.25rem;
+				width: 100%;
+			}
+			body{
+				font-family: 宋体 ;
+			}
+			textarea{
+				width: 100%;
+				height: 9.375rem;
+				margin-top: 1.25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<span>地名：</span><input type="text" id="location" value=""/>
+		<span>公司类型：</span><input type="text" id="companyType" value=""/>
+		<span>公司名称：</span><input type="text" id="companyName" value=""/>
+		<span>老板姓名：</span><input type="text" id="bossName" value=""/>
+		<span>money:</span><input type="text" id="money" value=""/>
+		<span>产品：</span><input type="text" id="product" value=""/>
+		<span>价格计量单位：</span><input type="text" id="unit" value=""/>
+		<br />
+		<br />
+		<div align="center">
+			<button id="generate" onclick="generate()">生成</button>
+			<br />
+			<textarea id="result">浙江最大互联网公司阿里九九倒闭了，王八蛋老板牛风吃喝嫖赌，欠下了一万个亿，带着他的小姨子跑了!我们没有办法，拿着贴膜抵工资!原价都是一百多、两百多、三百多的贴膜，现在全部只卖二十块，统统只要二十块!牛风王八蛋，你不是人!我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱!</textarea>
+		</div>
+	</body>
+</html>
